@@ -1,0 +1,6 @@
+{
+  "name": "Lib dsp",
+  "tagline": "C++ DSP Library for Audio Applications",
+  "body": "![lib_dsp_logo](http://www.modernmetalproduction.com/wp-content/uploads/edd/2016/05/lib_dsp_logo-e1464153188630.png)\r\n\r\n**********************\r\nLIB_DSP\r\nAuthor: Ethan Reker\r\nPurpose: To create a simple to use C++ Library for digital audio applications.\r\n**********************\r\n\r\nThis library is free to use in any application.  To use this in your project, simply\r\ninclude the lib_dsp.h file located in the include directory, or if you only need a certain\r\ncomponent, include the necessary file (filters.h, delays.h, etc).\r\n\r\n**********************\r\nContact\r\n**********************\r\nemail: ctrecordingslive@gmail.com\r\nwebsite: http://www.modernmetalproduction.com",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
