@@ -4,5 +4,6 @@
 #include "filters.h"
 #include "oscillators.h"
 #include "delays.h"
+#include "dsp_functions.h"
 
 #endif
