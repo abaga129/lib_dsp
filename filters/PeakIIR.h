@@ -13,6 +13,11 @@
 
 #include "BiQuadFilter.h"
 
+using namespace dsp;
+
+namespace dsp
+{
+
 class PeakIIR : public BiQuadFilter {
 public:
 	PeakIIR(int numChannels, float G, float fc, float Q, float fs) : BiQuadFilter(numChannels, fc, fs){
@@ -49,5 +54,5 @@ private:
 };
 
 
-
+}//end namespace dsp
 #endif  // PEAKIIR_H_INCLUDED
