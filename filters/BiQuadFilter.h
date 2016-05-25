@@ -20,6 +20,10 @@
 
 using std::stack;
 using std::vector;
+using namespace dsp;
+
+namespace dsp
+{
 
 class BiQuadFilter {
 protected:
@@ -75,5 +79,6 @@ public:
 
 };
 
+}//end namespace dsp
 
 #endif  // BIQUADFILTER_H_INCLUDED
