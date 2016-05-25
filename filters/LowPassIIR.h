@@ -13,6 +13,11 @@
 
 #include "BiQuadFilter.h"
 
+using namespace dsp;
+
+namespace dsp
+{
+
 class LowPassIIR : public BiQuadFilter {
 public:
 	LowPassIIR(int numChannels, float fc, float fs) : BiQuadFilter(numChannels, fc, fs) {
@@ -43,5 +48,5 @@ private:
 };
 
 
-
+}//end namespace dsp
 #endif  // LOWPASSIIR_H_INCLUDED
