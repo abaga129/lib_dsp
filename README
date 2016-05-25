@@ -1,0 +1,15 @@
+**********************
+LIB_DSP
+Author: Ethan Reker
+Purpose: To create a simple to use C++ Library for digital audio applications.
+**********************
+
+This library is free to use in any application.  To use this in your project, simply
+include the lib_dsp.h file located in the include directory, or if you only need a certain
+component, include the necessary file (filters.h, delays.h, etc).
+
+**********************
+Contact
+**********************
+email: ctrecordingslive@gmail.com
+website: http://www.modernmetalproduction.com
