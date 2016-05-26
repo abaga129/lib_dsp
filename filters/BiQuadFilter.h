@@ -13,10 +13,13 @@
 
 #ifndef BIQUADFILTER_H_INCLUDED
 #define BIQUADFILTER_H_INCLUDED
+#ifndef PI
 #define PI 3.14159265359
+#endif
 
 #include<stack>
 #include<vector>
+#include "../core/buffer.h"
 
 using std::stack;
 using std::vector;

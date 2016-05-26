@@ -4,7 +4,7 @@
 #include "filters.h"
 #include "oscillators.h"
 #include "delays.h"
-#include "core.h"
+#include "../core/core.h"
 #include "dsp_functions.h"
 
 #endif
