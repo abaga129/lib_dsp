@@ -20,7 +20,7 @@ private:
 };
 
 Buffer::Buffer(size_t size){
-  data = new float(size);
+  data = new float[size];
   writeIndex = 0;
   readIndex = 1;
   numSamples = size;
