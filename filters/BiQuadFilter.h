@@ -38,15 +38,15 @@ private:
 };
 
 BiQuadFilter::BiQuadFilter(int numChannels, int centerFrequency, double sampleRate){
-		fc = centerFrequency;
-		BiQuadFilter::numChannels = numChannels;
-		fs = sampleRate;
-		for (int i = 0; i < numChannels; i++){
-			Buffer *b = new Buffer(2);
-			inputBuffer.push_back(*b);
-			b = new Buffer(2);
-			outputBuffer.push_back(*b);
-		}
+	fc = centerFrequency;
+	BiQuadFilter::numChannels = numChannels;
+	fs = sampleRate;
+	for (int i = 0; i < numChannels; i++){
+		Buffer *b = new Buffer(2);
+		inputBuffer.push_back(*b);
+		b = new Buffer(2);
+		outputBuffer.push_back(*b);
+	}
 }
 
 float BiQuadFilter::nextSample(float sample, int channel){
