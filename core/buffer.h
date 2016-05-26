@@ -10,6 +10,7 @@ public:
   void write(float sample);
   float read();
   float getSample(size_t index);
+  void setSample(float sample, size_t index);
   float* getWritePointer();
 private:
   float *data;
@@ -31,9 +32,7 @@ void Buffer::write(float sample){
 }
 
 float Buffer::read(){
-  float sample = data[readIndex];
-  readIndex++
-  return sample;
+  return data[++readIndex];
 }
 
 float* Buffer::getWritePointer(){
@@ -43,6 +42,10 @@ float* Buffer::getWritePointer(){
 
 float Buffer::getSample(size_t index){
   return data[index];
+}
+
+void Buffer::setSample(float sample, size_t index){
+  data[index] = sample;
 }
 
 }//end namespace dsp
