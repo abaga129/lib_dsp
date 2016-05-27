@@ -1,10 +1,14 @@
-#ifndef DIRECT_FORM_OSCILLATOR2_CPP
-#define DIRECT_FROM_OSCILLATOR2_CPP
-
-#define PI 3.14159265
+#ifndef DIRECT_FORM_OSCILLATOR_H
+#define DIRECT_FROM_OSCILLATOR_H
 
 #include <cmath>
+#include "../core/core.h"
 
+/*
+Simple class to generate oscillators or LFOs.  Good for generating waves that wont change frequency
+during playback because it can make audible pops or clicks when changing frequency.  However it is slightly more
+efficient than the GordonSmithOscillator.
+*/
 class DirectFormOscillator {
 public:
     DirectFormOscillator();
@@ -15,6 +19,8 @@ public:
     
     /*Returns the next sample and increments the delaySamples*/
     float getNextSample(float input);
+	
+	/*Called to reset the output buffer*/
     void flush();
 private:
     float theta;

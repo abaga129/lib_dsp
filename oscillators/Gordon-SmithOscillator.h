@@ -1,12 +1,13 @@
 #ifndef GORDON_SMITH_OSCILLATOR_H
 #define GORDON_SMITH_OSCILLATOR_H
 
-
-
-
 #include<cmath>
-#define PI 3.14159265
+#include "../core/core.h"
 
+/*
+Class for creating pure sine wave oscillators or LFOs based on the Gordon Smith design.
+The frequency can change smoothly with no audible pops or clicks.
+*/
 class GordonSmithOscillator{
 public:
 	GordonSmithOscillator();
