@@ -15,15 +15,28 @@ namespace dsp
 {
 
 class BiQuadFilter {
-public:
+public: 
+	/*
+	Constructor. Initializes the sample rate and center frequency.
+	Creates a series of Buffers and pushes them into the vectors for each channel.
+	*/
 	BiQuadFilter(int numChannels, int centerFrequency, double sampleRate);
+	
+	/*
+	Calculates and returns the next output sample based on the sample that is input.
+	Channel specifies which channel is being processed.
+	*/
 	float nextSample(float sample, int channel);
+	
 	void setSampleRate(double sampleRate) { fs = sampleRate; }
 	double getSampleRate() { return fs; }
+	
+	/*
+	Call any time the center frequency is changed. All coefficients are recalculated.
+	*/
 	virtual void update(float fc, float fs, float G = 0);
-
-		int numChannels;
-
+	
+	int numChannels;
 	double fs; //Sample Rate
 	int fc; //Center Frequency
 
@@ -32,8 +45,12 @@ public:
 	float c0, d0; //Dry/Wet coefficients
 	
 private:
-
+	//Holds a number of buffers equal to the number of channels.
+	//Each buffer only has two samples and represents the input buffer.
 	vector<Buffer> inputBuffer;
+	
+	//Holds a number of buffers equal to the number of channels.
+	//Each buffer only has two samples and represents the output buffer.
 	vector<Buffer> outputBuffer;
 };
 
