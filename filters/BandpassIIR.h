@@ -7,7 +7,17 @@
 #ifndef BANDPASSIIR_H
 #define BANDPASSIIR_H
 
-#include 
+#include "LowpassIIR.h"
+#include "HighpassIIR.h"
 
+namespace dsp
+{
 
+class BandpassIIR{
+  BandpassIIR();
+  float getNextSample();
+  
+}
+  
+}//end namespace dsp
 #endif
