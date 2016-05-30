@@ -12,6 +12,8 @@
 #include "LowpassIIR.h"
 #include "HighpassIIR.h"
 
+using namespace dsp;
+
 namespace dsp
 {
 
