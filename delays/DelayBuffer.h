@@ -11,9 +11,6 @@
  #ifndef DELAY_BUFFER_H
  #define DELAY_BUFFER_H
 
-#include <vector>
-using std::vector;
-
  class DelayBuffer{
      public:
     
@@ -37,7 +34,7 @@ using std::vector;
      private:
 
         //Points to an array of floats equal in size to the delay amount.
-        vector<float> *bufferPtr;
+        double *bufferPtr;
         
         //Controls the ratio of input to out. (dry = 1 - wet)
         float wet;
@@ -57,18 +54,13 @@ using std::vector;
  };
  
  DelayBuffer::DelayBuffer(size_t delayAmount, float feedback, float wet_amount){
-	 vector<float>& buffer = *bufferPtr;
-     fb = feedback;
-     wet = wet_amount;
+	 bufferPtr = new double[delayAmount];
+     	 fb = feedback;
+	 wet = wet_amount;
 	 bufferSize = delayAmount;
-     
-     //Create and the buffer and initialize it to 0.
-	 bufferPtr = new vector<float>[bufferSize];
-	 for (int i = 0; i < bufferSize; i++) {
-		 bufferPtr->push_back(0);
-	 }
-     iWrite = delayAmount -1;
-     iRead = 0;
+
+     	 iWrite = delayAmount -1;
+     	 iRead = 0;
  }
  
  float DelayBuffer::getNextSample(float sample){
