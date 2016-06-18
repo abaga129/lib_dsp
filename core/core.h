@@ -7,5 +7,6 @@
 
 #include "buffer.h"
 #include "EnvelopeDetector.h"
+#include "dsp_functions.h"
 
 #endif

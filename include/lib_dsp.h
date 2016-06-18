@@ -5,6 +5,6 @@
 #include "oscillators.h"
 #include "delays.h"
 #include "../core/core.h"
-#include "dsp_functions.h"
+#include "effects.h"
 
 #endif
