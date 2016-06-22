@@ -2,7 +2,7 @@
 #define DIGITAL_DELAY_H
 
 class DigitalDelay{
-  DigitalDelay(size_t delayAmount, float feedback, float wet_amount = 0);
+  DigitalDelay(size_t delayAmount, float feedback, float wet_amount  = 0);
   float getNextSample(float sample);
   void resize(size_t size);
   void flush();
@@ -30,9 +30,10 @@ private:
     size_t delayAmount;
 };
 
-DigitalDelay::DigtalDelay(size_t delayAmount, float feedback, float wet_amount = 0){
+DigitalDelay::DigitalDelay(size_t delayAmount, float feedback, float wet_amount){
     bufferPtr = new float[delayAmount + 1];
-    DigtalDelay::delayAmount = delayAmount;
+    DigitalDelay::delayAmount = delayAmount;
+	wet = wet_amount;
     iWrite = 0;
     iRead = delayAmount;
 }
@@ -45,12 +46,12 @@ float DigitalDelay::getNextSample(float sample){
     if(iRead > delayAmount + 1)
         iRead = 0;
         
-    float yn = buffer[iRead];
-    buffer[iWrite] = sample + fb * yn;
+    float yn = bufferPtr[iRead];
+    bufferPtr[iWrite] = sample + fb * yn;
     return wet * yn + sample * (1 - wet);
 }
 
-float DigitalDelay::resize(size_t size){
+void DigitalDelay::resize(size_t size){
     /*bufferPtr = new float[delayAmount + 1];
     DigtalDelay::delayAmount = delayAmount;
     
