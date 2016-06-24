@@ -8,5 +8,6 @@
 #include "buffer.h"
 #include "EnvelopeDetector.h"
 #include "dsp_functions.h"
+#include "BezierCurve.h"
 
 #endif

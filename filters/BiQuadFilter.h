@@ -6,6 +6,7 @@
 #endif
 
 #include <vector>
+#include <cmath>
 #include "../core/buffer.h"
 
 using namespace dsp;

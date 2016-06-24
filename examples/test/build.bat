@@ -1,0 +1,1 @@
+cmd /k g++ BezierCurveTest.cpp -o test.exe
