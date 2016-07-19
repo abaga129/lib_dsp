@@ -1,9 +1,13 @@
 /****************************************
 * Author: Ethan Reker
 * Date Created: June 22, 2016
-* Purpose: Create a class to implement a
-*   quadratic bezier curve.
-*
+* Purpose: Create a class to implement a quadratic bezier curve.
+*   This implementation is mostly tailored to generating points for
+*   the soft-knee on a compressor. Usually a bezier curve is treated
+*   as a function of t (parametric curve), but for the soft-knee we
+*   need to calculate the curve as a function of x, so t is aproximated
+*   from x which works fine for this purpose.  The only draw back is
+*   this curve has very limited uses.
 */
 
 #ifndef BEZIER_CURVE_H
