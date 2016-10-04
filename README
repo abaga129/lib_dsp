@@ -1,7 +1,7 @@
 **********************
-<h1>LIB_DSP</h1>
-Author: Ethan Reker
-Purpose: To create a simple to use C++ Library for digital audio applications.
+#LIB_DSP
+##Author: Ethan Reker
+####Purpose: To create a simple to use C++ Library for digital audio applications.
 **********************
 
 This library is free to use in any application.  To use this in your project, simply
