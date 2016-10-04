@@ -10,29 +10,27 @@ component, include the necessary file (filters.h, delays.h, etc).
 
 Current Components
 
->Filters
-	* Generic BiQuadFilter
-	* Lowpass IIR 
-	* Highpass IIR
-	* Peak IIR
-	* BandPass IIR
+####Filters
+	- Generic BiQuadFilter
+	- Lowpass IIR 
+	- Highpass IIR
+	- Peak IIR
+	- BandPass IIR
 
->Effects
-	* Compressor (only hard-knee currently. Will be implementing soft-knee soon)
-	* Digital Delay
-	+ Plans to implement various modulated effects such as tremolo, chorus, and flanger
+####Effects
+	- Compressor (only hard-knee currently. Will be implementing soft-knee soon)
+	- Digital Delay
+	- Plans to implement various modulated effects such as tremolo, chorus, and flanger
 	
->Oscillators
-	* Direct Form Oscillator
-	* Gordon-Smith Oscillator (For an oscillator that will change frequency while playing)
+####Oscillators
+	- Direct Form Oscillator
+	- Gordon-Smith Oscillator (For an oscillator that will change frequency while playing)
 	
->Core
-	* Functions for common conversions such as dB to float
-	* Linear Interpolator for graphics and for soft-knee compression
-	* Buffer class for storing large amounts of data
+####Core
+	- Functions for common conversions such as dB to float
+	- Linear Interpolator for graphics and for soft-knee compression
+	- Buffer class for storing large amounts of data
 
-**********************
-Contact
-**********************
-email: ctrecordingslive@gmail.com
-website: http://www.modernmetalproduction.com
+###Contact
+####email: ctrecordingslive@gmail.com
+####website: http://www.modernmetalproduction.com
