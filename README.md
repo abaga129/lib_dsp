@@ -8,7 +8,7 @@ This library is free to use in any application.  To use this in your project, si
 include the lib_dsp.h file located in the include directory, or if you only need a certain
 component, include the necessary file (filters.h, delays.h, etc).
 
-Current Components
+##Current Components
 
 ####Filters
 	- Generic BiQuadFilter
