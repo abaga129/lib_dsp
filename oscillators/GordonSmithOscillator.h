@@ -2,12 +2,13 @@
 #define GORDON_SMITH_OSCILLATOR_H
 
 #include<cmath>
-#include "../core/core.h"
+#include "../include/core.h"
 
 /*
 Class for creating pure sine wave oscillators or LFOs based on the Gordon Smith design.
 The frequency can change smoothly with no audible pops or clicks.
 */
+namespace DSP{
 class GordonSmithOscillator{
 public:
 	GordonSmithOscillator();
@@ -34,37 +35,5 @@ private:
 	bool init;
 
 };
-
-GordonSmithOscillator::GordonSmithOscillator() {
-	init = false;
 }
-
-void GordonSmithOscillator::setFrequency(float frequency, float sampleRate) {
-	fo = frequency;
-	fs = sampleRate;
-
-	theta = 2 * PI * fo / fs;
-	epsilon = 2 * sinf(theta / 2);
-
-	if (!init) {
-		yn1 = sinf(-1 * theta);
-		yq1 = cosf(-1 * theta);
-		init = true;
-	}
-
-}
-
-float GordonSmithOscillator::getNextSample(float input) {
-	yq = yq1 - epsilon * yn1;
-	yn = epsilon * yq + yn1;
-
-	yq1 = yq;
-	yn1 = yn;
-	return yn;
-}
-
-void GordonSmithOscillator::flush() {
-
-}
-
 #endif // !GORDON_SMITH_OSCILLATOR_H

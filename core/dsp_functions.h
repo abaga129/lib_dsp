@@ -3,23 +3,15 @@
 
 #include <cmath>
 
-namespace dsp
+namespace DSP
 {
-float floatToDecibel(float value){
-  return 20 * logf(value);
-}
+float floatToDecibel(float value);
 
-float decibelToFloat(float value){
-  return pow(10, (value/20));
-}
+float decibelToFloat(float value);
 
-float msToSamples(float ms, float sampleRate){
-  return ms * (sampleRate / 1000);
-}
+float msToSamples(float ms, float sampleRate);
 
-float samplesToMs(float samples, float sampleRate){
-  return samples/(sampleRate/1000);
-}
+float samplesToMs(float samples, float sampleRate);
 
 }//end namespace
 #endif

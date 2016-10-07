@@ -3,7 +3,7 @@
 
 #include "filters.h"
 #include "oscillators.h"
-#include "../core/core.h"
+#include "core.h"
 #include "effects.h"
 
 #endif
