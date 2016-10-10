@@ -6,16 +6,17 @@ CC = g++
 #  -Wall turns on most, but not all, compiler warnings
 CFLAGS  = -g -Wall
 
+WNO = -Wno-reorder
+
 # file names
 BC = BezierCurve
-BF = buffer
+BF = Buffer
 FNC = dsp_functions
 
 all:
-	$(RM) $(BC).o $(BF).o $(FNC).o
-	$(CC) $(CFLAGS) -c $(BC).cpp
-	$(CC) $(CFLAGS) -c $(BF).cpp
-	$(CC) $(CFLAGS) -c $(FNC).cpp
+	$(CC) $(CFLAGS) -c $(BC).cpp $(WNO)
+	$(CC) $(CFLAGS) -c $(BF).cpp $(WNO)
+	$(CC) $(CFLAGS) -c $(FNC).cpp $(WNO)
 
 
 $(BC).o: $(BC).h $(BC).cpp

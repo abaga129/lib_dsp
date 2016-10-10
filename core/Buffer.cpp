@@ -1,4 +1,4 @@
-#include "buffer.h"
+#include "Buffer.h"
 
 using namespace DSP;
 
@@ -11,11 +11,12 @@ Buffer::Buffer(size_t size){
 
 void Buffer::write(float sample){
   data[writeIndex] = sample;
-  writeIndex++;
+  increment(writeIndex);
 }
 
 float Buffer::read(){
-  return data[++readIndex];
+  increment(readIndex);
+  return data[readIndex];
 }
 
 float* Buffer::getWritePointer(){
@@ -23,10 +24,20 @@ float* Buffer::getWritePointer(){
   return ptr;
 }
 
-float Buffer::getSample(size_t index){
+float Buffer::getSample(const size_t index){
   return data[index];
 }
 
 void Buffer::setSample(float sample, size_t index){
   data[index] = sample;
+}
+
+void Buffer::increment(size_t index){
+  index++;
+  if(index == numSamples)
+    index = 0;
+}
+
+void Buffer::resize(size_t size){
+  
 }

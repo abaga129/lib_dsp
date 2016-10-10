@@ -6,13 +6,15 @@ CC = g++
 #  -Wall turns on most, but not all, compiler warnings
 CFLAGS  = -g -Wall
 
+WNO = -Wno-reorder
+
 # file names
 CMP = Compressor
 DDL = DigitalDelay
 
 all:
-	$(CC) $(CFLAGS) -c $(CMP).cpp
-	$(CC) $(CFLAGS) -c $(DDL).cpp
+	$(CC) $(CFLAGS) -c $(CMP).cpp $(WNO)
+	$(CC) $(CFLAGS) -c $(DDL).cpp $(WNO)
 
 $(CMP).o: $(CMP).h $(CMP).cpp
 	$(CC) $(CFLAGS) -c $(CMP).cpp

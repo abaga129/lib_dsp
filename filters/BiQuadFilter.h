@@ -7,7 +7,7 @@
 
 #include <vector>
 #include <cmath>
-#include "../core/buffer.h"
+#include "../core/Buffer.h"
 
 using std::vector;
 

@@ -5,7 +5,7 @@
 #define PI 3.14159265
 #endif
 
-#include "../core/buffer.h"
+#include "../core/Buffer.h"
 #include "../core/EnvelopeDetector.h"
 #include "../core/dsp_functions.h"
 #include "../core/BezierCurve.h"
