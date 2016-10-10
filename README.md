@@ -9,11 +9,11 @@ include the lib_dsp.h file located in the include directory, or if you only need
 component, include the necessary file (filters.h, delays.h, etc).
 
 ##Installation and Use
-Open command prompt
-run "make all"
-In the file that will need the library include "lib_dsp_location/include/lib_dsp.h".
+	-Open command prompt
+	-run "make all"
+	-In the file that will need the library include "lib_dsp_location/include/lib_dsp.h".
 	- #include "lib_dsp_location/include/lib_dsp.h"
-Link lib_dsp.o when compiling
+	-Link lib_dsp.o when compiling
 	- g++ lib_dsp_location/include/lib_dsp.o main.cpp -o main.exe
 
 ##Current Components
