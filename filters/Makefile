@@ -22,6 +22,8 @@ all:
 	$(CC) $(CFLAGS) -c $(HPI).cpp
 	$(CC) $(CFLAGS) -c $(BPI).cpp
 	$(CC) $(CFLAGS) -c $(PI).cpp
+	ld -r $(BQF).o $(LPI).o $(HPI).o $(BPI).o $(PI).o -o filters.o
+	mv filters.o ../include/filters.o
 
 
 $(BQF).o: $(BQF).h $(BQF).cpp

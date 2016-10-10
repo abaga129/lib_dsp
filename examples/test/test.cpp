@@ -3,6 +3,7 @@
 #include "../../include/lib_dsp.h"
 
 using std::cout;
+using namespace DSP;
 
 int main(int argv, char** argc){
 	cout << "*************************\n"

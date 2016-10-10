@@ -6,15 +6,18 @@ CC = g++
 #  -Wall turns on most, but not all, compiler warnings
 CFLAGS  = -g -Wall
 
+WNO = -Wno-reorder
+
 # file names
-DFO = DirectFormOscillator
-GSO = GordonSmithOscillator
+CR = core
+FX = effects
+OSC = oscillators
+LBD = lib_dsp
+FLT = filters
 
-$(DFO).o: $(DFO).h $(DFO).cpp
-	$(CC) $(CFLAGS) -c $(DFO).cpp
 
-$(GSO).o: $(GSO).h $(GSO).cpp
-	$(CC) $(CFLAGS) -c $(GSO).cpp
+all:
+	ld -r core.o effects.o filters.o oscillators.o -o lib_dsp.o
 
 clean:
-	$(RM) $(DFO).o $(GSO).o
+	$(RM) $(FX).o $(CR).o $(OSC).o $(FLT).o $(LBD).o lib_dsp.o

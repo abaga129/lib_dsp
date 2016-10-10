@@ -15,6 +15,8 @@ DDL = DigitalDelay
 all:
 	$(CC) $(CFLAGS) -c $(CMP).cpp $(WNO)
 	$(CC) $(CFLAGS) -c $(DDL).cpp $(WNO)
+	ld -r $(CMP).o $(DDL).o -o effects.o
+	mv effects.o ../include/effects.o
 
 $(CMP).o: $(CMP).h $(CMP).cpp
 	$(CC) $(CFLAGS) -c $(CMP).cpp

@@ -2,6 +2,6 @@
 #define OSCILLATORS_H
 
 #include "../oscillators/DirectFormOscillator.h"
-#include "../oscillators/Gordon-SmithOscillator.h"
+#include "../oscillators/GordonSmithOscillator.h"
 
 #endif

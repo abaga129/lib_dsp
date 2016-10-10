@@ -6,17 +6,16 @@ CC = g++
 #  -Wall turns on most, but not all, compiler warnings
 CFLAGS  = -g -Wall
 
-# the build target executable:
-TARGET = myprog
-
 all:
 	cd core && make all
 	cd effects && make all
 	cd filters && make all
 	cd oscillators && make all
+	cd include && make all
 
 clean:
 	cd core && make clean
 	cd effects && make clean
 	cd filters && make clean
 	cd oscillators && make clean
+	cd include && make clean

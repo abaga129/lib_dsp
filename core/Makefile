@@ -12,11 +12,15 @@ WNO = -Wno-reorder
 BC = BezierCurve
 BF = Buffer
 FNC = dsp_functions
+ENV = EnvelopeDetector
 
 all:
 	$(CC) $(CFLAGS) -c $(BC).cpp $(WNO)
 	$(CC) $(CFLAGS) -c $(BF).cpp $(WNO)
 	$(CC) $(CFLAGS) -c $(FNC).cpp $(WNO)
+	$(CC) $(CFLAGS) -c $(ENV).cpp $(WNO)
+	ld -r $(BC).o $(BF).o $(FNC).o $(ENV).o -o core.o
+	mv core.o ../include/core.o
 
 
 $(BC).o: $(BC).h $(BC).cpp

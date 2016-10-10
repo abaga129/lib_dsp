@@ -13,6 +13,8 @@ GSO = GordonSmithOscillator
 all:
 	$(CC) $(CFLAGS) -c $(DFO).cpp
 	$(CC) $(CFLAGS) -c $(GSO).cpp
+	ld -r $(DFO).o $(GSO).o -o oscillators.o
+	mv oscillators.o ../include/oscillators.o
 
 $(DFO).o: $(DFO).h $(DFO).cpp
 	$(CC) $(CFLAGS) -c $(DFO).cpp
