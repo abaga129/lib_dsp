@@ -2,21 +2,21 @@
 
 using namespace DSP;
 
-DigitalDelay::DigitalDelay(size_t delayAmount, float fb, float wet){
+DigitalDelay::DigitalDelay(size_t delayAmount, float fb, float wet) : buffer(){
 	this->delayAmount = delayAmount;
 	this->fb = fb;
 	this->wet = wet;
-    buffer = new Buffer(delayAmount);
+    buffer.initialize(delayAmount);
 }
 
 float DigitalDelay::getNextSample(float sample){
-    float yn = buffer->read();
-    buffer->write(sample + fb * yn);
+    float yn = buffer.read();
+    buffer.write(sample + fb * yn);
     return wet * yn + sample * (1 - wet);
 }
 
 void DigitalDelay::resize(size_t delayAmount){
-    buffer->resize(delayAmount);
+    buffer.resize(delayAmount);
 }
 
 void DigitalDelay::setFeedback(float feedback){ fb = feedback; }

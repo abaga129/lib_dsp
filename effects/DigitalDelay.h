@@ -6,6 +6,7 @@
 
 namespace DSP{
 class DigitalDelay{
+public:
   DigitalDelay(size_t delayAmount, float fb, float wet  = 0);
   float getNextSample(float sample);
   void resize(size_t delayAmount);
@@ -15,7 +16,7 @@ class DigitalDelay{
   void setWet(float wet_amount);
     
 private:
-    DSP::Buffer *buffer;
+    DSP::Buffer buffer;
     
     //Controls the ratio of input to out. (dry = 1 - wet)
     float wet;

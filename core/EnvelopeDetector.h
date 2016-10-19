@@ -5,8 +5,6 @@
 #define e 2.718281828459
 #endif
 
-#include "dsp_functions.h"
-
 namespace DSP
 {
 class EnvelopeDetector{

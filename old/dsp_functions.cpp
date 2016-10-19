@@ -1,10 +1,7 @@
-#ifndef LIB_DSP_H
-#define LIB_DSP_H
+#include "dsp_functions.h"
 
-#include "filters.h"
-#include "oscillators.h"
-#include "core.h"
-#include "effects.h"
+using namespace DSP;
+
 
 float floatToDecibel(float value){
   return 20 * logf(value);
@@ -21,5 +18,3 @@ float msToSamples(float ms, float sampleRate){
 float samplesToMs(float samples, float sampleRate){
   return samples/(sampleRate/1000);
 }
-
-#endif

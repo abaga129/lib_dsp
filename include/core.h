@@ -7,7 +7,6 @@
 
 #include "../core/Buffer.h"
 #include "../core/EnvelopeDetector.h"
-#include "../core/dsp_functions.h"
 #include "../core/BezierCurve.h"
 
 #endif
