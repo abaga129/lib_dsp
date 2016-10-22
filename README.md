@@ -28,7 +28,10 @@ component, include the necessary file (filters.h, delays.h, etc).
 ####Effects
 	- Compressor (only hard-knee currently. Will be implementing soft-knee soon)
 	- Digital Delay
-	- Plans to implement various modulated effects such as tremolo, chorus, and flanger
+	- Modulated Delay
+	- Flanger			
+	- Chorus
+	- Vibrato
 	
 ####Oscillators
 	- Direct Form Oscillator
@@ -38,7 +41,12 @@ component, include the necessary file (filters.h, delays.h, etc).
 	- Functions for common conversions such as dB to float
 	- Linear Interpolator for graphics and for soft-knee compression
 	- Buffer class for storing large amounts of data
-
+	
+	
+#####Not Currently Implemented
+	- Reverb
+	- Wave Table Oscillator
+	
 ###Contact
 ####email: ctrecordingslive@gmail.com
 ####website: http://www.modernmetalproduction.com
