@@ -18,7 +18,8 @@ all:
 	$(CC) $(CFLAGS) -c $(BZC).cpp $(WNO)
 	$(CC) $(CFLAGS) -c $(BFF).cpp $(WNO)
 	$(CC) $(CFLAGS) -c $(ENV).cpp $(WNO)
-	ld -r $(BZC).o $(BFF).o $(ENV).o -o core.o
+	$(CC) $(CFLAGS) -c $(FNC).cpp $(WNO)
+	ld -r $(BZC).o $(BFF).o $(ENV).o $(FNC).o -o core.o
 	mv core.o ../include/core.o
 
 clean:

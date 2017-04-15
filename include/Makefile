@@ -9,15 +9,15 @@ CFLAGS  = -g -Wall
 WNO = -Wno-reorder
 
 # file names
-CR = core
-FX = effects
+LD = lib_dsp
+COR = core
+EFX = effects
+FTR = filters
 OSC = oscillators
-LBD = lib_dsp
-FLT = filters
 
 
 all:
-	ld -r core.o effects.o filters.o oscillators.o -o lib_dsp.o
+	ld -r $(COR).o $(EFX).o $(FTR).o $(OSC).o -o $(LD).o
 
 clean:
-	$(RM) $(FX).o $(CR).o $(OSC).o $(FLT).o $(LBD).o lib_dsp.o
+	$(RM) $(FX).o $(COR).o $(OSC).o $(FTR).o $(EFX).o $(LD).o

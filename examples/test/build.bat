@@ -1,1 +1,1 @@
-cmd /k g++ test.cpp -o test.exe
+cmd /k g++  ../../include/lib_dsp.o test.cpp -o test.exe

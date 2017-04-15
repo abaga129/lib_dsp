@@ -3,28 +3,12 @@
 
 #include <cmath>
 
-extern float floatToDecibel(float value);
+float floatToDecibel(float);
 
-extern float decibelToFloat(float value);
+float decibelToFloat(float);
 
-extern float msToSamples(float ms, float sampleRate);
+float msToSamples(float, float);
 
-extern float samplesToMs(float samples, float sampleRate);
+float samplesToMs(float, float);
+
 #endif
-/*
-extern float floatToDecibel(float value){
-  return 20 * logf(value);
-}
-
-extern float decibelToFloat(float value){
-  return pow(10, (value/20));
-}
-
-extern float msToSamples(float ms, float sampleRate){
-  return ms * (sampleRate / 1000);
-}
-
-extern float samplesToMs(float samples, float sampleRate){
-  return samples/(sampleRate/1000);
-}
-*/

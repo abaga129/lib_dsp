@@ -1,8 +1,5 @@
 #include "dsp_functions.h"
 
-using namespace DSP;
-
-
 float floatToDecibel(float value){
   return 20 * logf(value);
 }
